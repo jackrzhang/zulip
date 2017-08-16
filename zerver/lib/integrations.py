@@ -371,6 +371,15 @@ INTEGRATIONS = {
     'redmine': Integration('redmine', 'redmine', ['project-management'], doc='zerver/integrations/redmine.md'),
     'rss': Integration('rss', 'rss', ['communication'], display_name='RSS', doc='zerver/integrations/rss.md'),
     'svn': Integration('svn', 'svn', ['version-control'], doc='zerver/integrations/svn.md'),
+    'slack-import': Integration(
+        'slack-import',
+        'slack-import',
+        ['communication'],
+        logo='static/images/integrations/logos/slack.svg',
+        secondary_line_text='(import)',
+        display_name='Slack',
+        doc='zerver/integrations/slack-import.md'
+    ),
     'trac': Integration('trac', 'trac', ['project-management'], doc='zerver/integrations/trac.md'),
     'trello-plugin': Integration(
         'trello-plugin',
