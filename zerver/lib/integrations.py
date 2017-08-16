@@ -1,5 +1,6 @@
 from __future__ import absolute_import
 import os.path
+import ujson
 
 from typing import Dict, List, Optional, TypeVar, Any, Text
 from django.conf import settings
@@ -70,6 +71,7 @@ class Integration(object):
                     category + '\' is not a key in CATEGORIES.'
                 )
         self.categories = list(map((lambda c: CATEGORIES[c]), categories))
+        self.categories_json = ujson.dumps(self.categories)
 
         if logo is None:
             if os.path.isfile(self.DEFAULT_LOGO_STATIC_PATH_SVG.format(name=name)):

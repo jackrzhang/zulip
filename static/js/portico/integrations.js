@@ -139,12 +139,7 @@ function hide_catalog_show_integration() {
     var $lozenge_icon = $(".integration-lozenge.integration-" + state.integration).clone(false);
     $lozenge_icon.removeClass('legacy');
 
-    var categories = $('.integration-' + state.integration).data('categories')
-        .slice(1, -1)
-        .split(',')
-        .map(function (category) {
-            return category.trim().slice(1, -1);
-        });
+    var categories = $('.integration-' + state.integration).data('categories');
 
     function show_integration(doc) {
         $('#integration-instructions-group .name').text(INTEGRATIONS[state.integration]);
