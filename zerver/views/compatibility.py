@@ -10,3 +10,6 @@ def check_global_compatibility(request: HttpRequest) -> HttpResponse:
     if user_agent['name'] == "ZulipInvalid":
         return json_error("Client is too old")
     return json_success()
+
+def check_server_compatibility(request: HttpRequest) -> HttpResponse:
+    return json_success()
